@@ -1,0 +1,26 @@
+﻿<Window x:Class="PinWindow.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PinWindow"
+        mc:Ignorable="d"
+        KeyDown="Window_KeyDown"
+        WindowStartupLocation="CenterScreen"
+        Title="Pin a Window" Height="455" Width="346" Icon="/unknown_2.png">
+    <Grid HorizontalAlignment="Center" Width="326" Height="445" VerticalAlignment="Top">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="processListBox" HorizontalAlignment="Center" Margin="0,35,0,0" Width="266" Grid.Column="1" Height="300" VerticalAlignment="Top"/>
+        <Button x:Name="refreshButton" Content="Refresh Processes" HorizontalAlignment="Left" Margin="173,351,0,0" VerticalAlignment="Top" Width="111" Click="RefreshButton_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="bringToFrontButton" Content="Pin a window" HorizontalAlignment="Left" Margin="30,351,0,0" VerticalAlignment="Top" Width="120" Click="BringToFrontButton_Click" Grid.ColumnSpan="2"/>
+        <Button Content="UnPin" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="20" Margin="30,387,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click"/>
+        <Label Content="Shift+CAPS - pin this window" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="170,375,0,0" VerticalAlignment="Top" Width="145" Height="26" FontSize="10"/>
+        <Label Content="Shift+CTRL - unpin this window" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="170,391,0,0" VerticalAlignment="Top" Width="158" Height="26" FontSize="10"/>
+        <TextBox x:Name="searchtextbox" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="25" Margin="30,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="212"/>
+        <Button x:Name="searchbutton" Content="Find" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="249,10,0,0" VerticalAlignment="Top" Height="25" Width="47" Click="searchbutton_Click"/>
+    </Grid>
+</Window>
